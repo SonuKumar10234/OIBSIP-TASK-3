@@ -16,24 +16,23 @@
 
     <h1> Temperature Converter</h1>
     <form id="tempCalc" onsubmit="calculateTemp(); return false" class="calculator">
-        <label for="temp">Enter the temperature </label> 
+        <label for="temp">Enter the temperature </label>
         <br><br>
-        <input type="number" name="temp" id="temp" class="input-box">
+        <input type="number" name="temp" id="temp" class="input-box" placeholder="Enter the Temperature">
 
         <select name="temp_option" id="temp_option">
             <option value="celc">°Celcius</option>
             <option value="fahren">°Farenheit</option>
-
         </select> <br>
 
-        <input type="submit" class="submit" name="sub" value="Convert">
-        <input type="reset" class="submit1" name="sub" value="Reset">
-        <br><br>
+        <div class="btn_container">
+            <input type="submit" class="convert_btn" name="sub" value="Convert">
+            <input type="reset" class="reset_btn" name="sub" value="Reset">
+        </div>
+
         <h3>Answer</h3>
         <div class="result_area">
-
             <span id="resultContainer"></span>
-
         </div>
 
     </form>
@@ -43,4 +42,3 @@
 </body>
 
 </html>
-
