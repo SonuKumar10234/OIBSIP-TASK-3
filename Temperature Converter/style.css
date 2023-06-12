@@ -4,14 +4,13 @@ body {
   background-size: cover;
   text-align: center;
   font-weight: bold;
-  font-size: 1.3em;
+  font-size: 1.2em;
   font-family: 'Ubuntu';
-  overflow-y: hidden;
 }
 
 h1 {
   color: black;
-  margin-top: 1px;
+  margin: 20px;
 }
 
 label {
@@ -20,16 +19,22 @@ label {
 }
 
 .calculator {
-  margin: 12em;
-  padding: 1em 4em 2em 4em;
+  width: 50%;
+  margin: 0 auto;
+  padding: 1em 3em 2em 3em;
   background-image: linear-gradient(to right bottom, #051937, #004d7a, #008793, #00bf72, #a8eb12);
   color: azure;
   border-radius: 2em;
   box-shadow: 0px 3px 20px orange;
-  margin-top: 0em;
-}
 
-.submit {
+}
+.btn_container{
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  flex-wrap: wrap;
+}
+.convert_btn, .reset_btn {
   background: rgb(31, 138, 37);
   color: white;
   font-weight: bold;
@@ -40,7 +45,7 @@ label {
   transition: 2.5s;
 }
 
-.submit:hover {
+.convert_btn:hover {
   background: #c5e3f6;
   font-weight: bolder;
   padding: 1em 2em 1em 2em;
@@ -48,19 +53,7 @@ label {
   cursor: pointer;
 }
 
-.submit1 {
-  background: rgb(31, 138, 37);
-  color: white;
-  font-weight: bold;
-  margin-top: 2em;
-  font-size: 1em;
-  padding: 1em;
-  -webkit-transition: 2.5s;
-  transition: 2.5s;
-  margin-left: 50px;
-}
-
-.submit1:hover {
+.reset_btn:hover {
   background: orange;
   font-weight: bolder;
   padding: 1em 2em 1em 2em;
@@ -89,16 +82,13 @@ select {
 }
 
 .input-box {
-  margin-left: 5em;
   margin-top: 1em;
   height: 0px;
 }
 
 .result_area {
-  margin-top: 10px;
-  margin-bottom: 0px;
+  margin: 10px auto 0;
   height: 50px;
-  margin-left: 160px;
   width: 300px;
   line-height: 50px;
   border: 1px solid black;
@@ -106,4 +96,35 @@ select {
   color: black;
   border-radius: 20px;
 
+}
+@media only screen and (max-width: 486px){
+
+  .btn_container{
+    gap: 0.5em;
+  }
+  .reset_btn{
+    margin-top: 1em;
+  }
+  .convert_btn{
+    margin-top: 1em;
+  }
+}
+
+@media only screen and (max-width: 768px){
+  .calculator{
+    padding: 1em 5em 2em 3em;
+  }
+  .input-box {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 0.5em;
+  }
+  
+  label,h1{
+     font-size: 1.2em;
+  }
+  .result_area {
+    width: 100%;
+    margin-left: 0;
+  }
 }
